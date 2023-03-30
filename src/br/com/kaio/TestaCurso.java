@@ -15,6 +15,8 @@ public class TestaCurso {
 		
 		System.out.println(javaColecoes.getAulas());
 		
+		
+		
 	}
 
 }

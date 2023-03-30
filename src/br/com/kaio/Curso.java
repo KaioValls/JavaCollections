@@ -9,7 +9,7 @@ public class Curso {
 	private String nome;
 	private String intrutor;
 	private List<Aula> aulas = new ArrayList<Aula>();
-		
+
 	public Curso(String nome, String intrutor) {
 		super();
 		this.nome = nome;
@@ -19,16 +19,20 @@ public class Curso {
 	public String getIntrutor() {
 		return intrutor;
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}
-	
+
 	public List<Aula> getAulas() {
 		return Collections.unmodifiableList(aulas);
 	}
-	
+
 	public void adiciona(Aula aula) {
 		this.aulas.add(aula);
 	}
+
+	public int getTempoTotal(){ 
+		return this.aulas.stream().mapToInt(Aula::getTempo).sum(); 
+		} 
 }
